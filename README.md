@@ -6,11 +6,11 @@ This project is a web application built using YOLOv8 and Flask for object detect
 ## Technologies Used
 <hr>
 
--YOLOv8: The object detection model used for inference.
--Flask: Web framework for creating the API and frontend interface.
--Python: Programming language used for backend logic.
--Google Colab: Used for training the YOLO model.
--GitHub: For version control and code hosting.
+- YOLOv8: The object detection model used for inference.
+- Flask: Web framework for creating the API and frontend interface.
+- Python: Programming language used for backend logic.
+- Google Colab: Used for training the YOLO model.
+- GitHub: For version control and code hosting.
 
 ## Features
 <hr>
