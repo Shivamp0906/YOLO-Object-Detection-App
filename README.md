@@ -19,24 +19,24 @@ This project is a web application built using **YOLOv8** and **Flask** for objec
 ## Installation & Setup
 
 1. **Clone the repository:**
-git clone https://github.com/Shivamp0906/YOLO-Object-Detection-App.git
-cd YOLO-Object-Detection-App
+- git clone https://github.com/Shivamp0906/YOLO-Object-Detection-App.git
+- cd YOLO-Object-Detection-App
 
 2. **Set up a Python virtual environment:** 
-python -m venv venv
+- python -m venv venv
 
 3. **Activate the virtual environment:**
 - For Windows: .\venv\Scripts\activate
 - For macOS/Linux: source venv/bin/activate
 
 4. **Install required dependencies:** 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 5. **Run the Flask app:**
-python app.py
+- python app.py
 
 6. **Open the app in your browser:**
-Navigate to http://127.0.0.1:5000/ to access the app.
+- Navigate to http://127.0.0.1:5000/ to access the app.
 
 ## How to Use the App
 
