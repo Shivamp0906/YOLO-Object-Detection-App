@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLO Inference</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffe600;
+            text-shadow: 2px 2px #000;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 0 auto 20px auto;
+            padding: 10px;
+            border: 2px dashed #fff;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button {
+            background: #ffe600;
+            border: none;
+            color: #000;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ffcc00;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        ul li span {
+            font-weight: bold;
+            color: #ffe600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YOLO Object Detection</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="image">Upload an image:</label>
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        {% if uploaded_image_path %}
+            <h3>Uploaded Image:</h3>
+            <img src="{{ url_for('static', filename=uploaded_image_path) }}" alt="Uploaded Image">
+        {% endif %}
+
+        {% if detections %}
+            <h3>Detections:</h3>
+            <ul>
+                {% for detection in detections %}
+                    <li><span>{{ detection['label'] }}</span> - Confidence: <span>{{ detection['confidence'] }}</span></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if output_image_path %}
+            <h3>Image with Bounding Boxes:</h3>
+            <img src="{{ url_for('static', filename=output_image_path) }}" alt="Image with Bounding Boxes">
+        {% endif %}
+
+    </div>
+</body>
+</html>
