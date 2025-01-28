@@ -1,5 +1,4 @@
 # YOLO-Object-Detection-App
-<hr>
 
 This project is a web application built using **YOLOv8** and **Flask** for object detection. The app allows users to upload an image, and it will display detected objects, their confidence scores, and the bounding boxes around them. The model has been trained to detect two classes: **Cable Tower** and **Turbine**.
 
