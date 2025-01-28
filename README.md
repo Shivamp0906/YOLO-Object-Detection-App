@@ -3,7 +3,6 @@
 This project is a web application built using **YOLOv8** and **Flask** for object detection. The app allows users to upload an image, and it will display detected objects, their confidence scores, and the bounding boxes around them. The model has been trained to detect two classes: **Cable Tower** and **Turbine**.
 
 ## Technologies Used
-<hr>
 
 - **YOLOv8:** The object detection model used for inference.
 - **Flask:** Web framework for creating the API and frontend interface.
@@ -12,14 +11,12 @@ This project is a web application built using **YOLOv8** and **Flask** for objec
 - **GitHub:** For version control and code hosting.
 
 ## Features
-<hr>
 
 - Upload an image via the web interface.
 - Get object detection results including confidence scores and bounding boxes.
 - View the original uploaded image and the image with bounding boxes drawn around detected objects.
 
 ## Installation & Setup
-<hr>
 
 1. **Clone the repository:**
 git clone https://github.com/Shivamp0906/YOLO-Object-Detection-App.git
@@ -42,7 +39,6 @@ python app.py
 Navigate to http://127.0.0.1:5000/ to access the app.
 
 ## How to Use the App
-<hr>
 
 1. **Upload an image:** Select an image file from your system.
 2. The app will display:
@@ -52,18 +48,16 @@ Navigate to http://127.0.0.1:5000/ to access the app.
 - The image with bounding boxes drawn around the detected objects.
 
 ## Classes Detected
-<hr>
 
 - **Cable Tower**
 - **Turbine**
 
 ## Model Training
-<hr> 
 
 The YOLOv8 model was trained using a custom dataset containing images of cable towers and turbines. The training process was done on **Google Colab**, and the trained model weights are available in the weights folder.
 
 ## Contributors
-<hr>
+
 - **Shivam Pawar**
 
 
